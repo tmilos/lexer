@@ -2,6 +2,11 @@
 
 PHP implementation of Lexical Analyzer.
 
+[![Author](http://img.shields.io/badge/author-@tmilos-blue.svg?style=flat-square)](https://twitter.com/tmilos77)
+[![Build Status](https://travis-ci.org/tmilos/lexer.svg?branch=master)](https://travis-ci.org/tmilos/lexer)
+[![Coverage Status](https://coveralls.io/repos/github/tmilos/lexer/badge.svg?branch=master)](https://coveralls.io/github/tmilos/lexer?branch=master)
+[![License](https://img.shields.io/packagist/l/tmilos/lexer.svg)](https://packagist.org/packages/tmilos/lexer)
+
 > **Warning**
 > This is not a GENERATOR like classical lex is. It does not produce any php code. It's a simple plain scanner
 > of the given input string and tokenizer into given set of tokens by matching regular expressions.
