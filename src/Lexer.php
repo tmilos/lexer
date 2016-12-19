@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the Tmilos/Lexer package.
+ *
+ * (c) Milos Tomic <tmilos@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace Tmilos\Lexer;
 
 use Tmilos\Lexer\Config\LexerConfig;
@@ -38,7 +47,7 @@ class Lexer
 
     /**
      * @param LexerConfig $config
-     * @param string     $input
+     * @param string      $input
      *
      * @return Token[]
      */
@@ -54,9 +63,9 @@ class Lexer
                 if (preg_match($tokenDefinition->getRegex(), $input, $matches)) {
                     $str = $matches[0];
                     $len = strlen($str);
-                    if (strlen($tokenDefinition->getName())>0) {
+                    if (strlen($tokenDefinition->getName()) > 0) {
                         $tokens[] = new Token($tokenDefinition->getName(), $str, $offset, $position);
-                        $position++;
+                        ++$position;
                     }
                     $input = substr($input, $len);
                     $anyMatch = true;

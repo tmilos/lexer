@@ -1,10 +1,19 @@
 <?php
 
+/*
+ * This file is part of the Tmilos/Lexer package.
+ *
+ * (c) Milos Tomic <tmilos@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace Tmilos\Lexer\Config;
 
 class TokenDefn
 {
-    /** @var string  */
+    /** @var string */
     protected $name;
 
     /** @var string */
@@ -13,7 +22,6 @@ class TokenDefn
     /**
      * @param string $name
      * @param string $regex
-     *
      * @param string $modifiers
      */
     public function __construct($name, $regex, $modifiers = 'i')
