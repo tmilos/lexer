@@ -1,0 +1,20 @@
+{
+    "name": "tmilos/lexer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Milos Tomic",
+            "email": "tmilos@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tmilos\\Lexer\\": "src/",
+            "Tests\\Tmilos\\Lexer\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "~5.6"
+    }
+}
