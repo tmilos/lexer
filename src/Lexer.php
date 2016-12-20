@@ -82,6 +82,14 @@ class Lexer
     }
 
     /**
+     * @return string
+     */
+    public function getInput()
+    {
+        return $this->input;
+    }
+
+    /**
      * @return int
      */
     public function getPosition()
@@ -164,9 +172,22 @@ class Lexer
         return $this->lookahead !== null;
     }
 
+    /**
+     * @param string $tokenName
+     */
     public function skipUntil($tokenName)
     {
         while ($this->lookahead !== null && $this->lookahead->getName() !== $tokenName) {
+            $this->moveNext();
+        }
+    }
+
+    /**
+     * @param string[] $tokenNames
+     */
+    public function skipTokens(array $tokenNames)
+    {
+        while ($this->lookahead !== null && in_array($this->lookahead->getName(), $tokenNames, true)) {
             $this->moveNext();
         }
     }
@@ -183,6 +204,22 @@ class Lexer
         } else {
             return null;
         }
+    }
+
+    /**
+     * @param string[] $tokenNames
+     *
+     * @return null|Token
+     */
+    public function peekWhileTokens(array $tokenNames)
+    {
+        while ($token = $this->peek()) {
+            if (!in_array($token->getName(), $tokenNames, true)) {
+                break;
+            }
+        }
+
+        return $token;
     }
 
     /**
