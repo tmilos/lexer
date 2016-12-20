@@ -73,7 +73,7 @@ class Token
 
     public function is($token)
     {
-        if ($token instanceof Token) {
+        if ($token instanceof self) {
             return $this->name === $token->getName();
         } elseif (is_string($token)) {
             return $this->name === $token;
