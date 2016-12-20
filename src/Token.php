@@ -70,4 +70,15 @@ class Token
     {
         return $this->value;
     }
+
+    public function is($token)
+    {
+        if ($token instanceof Token) {
+            return $this->name === $token->getName();
+        } elseif (is_string($token)) {
+            return $this->name === $token;
+        } else {
+            throw new \InvalidArgumentException('Expected string or Token');
+        }
+    }
 }
