@@ -6,6 +6,7 @@ PHP implementation of Lexical Analyzer.
 [![Build Status](https://travis-ci.org/tmilos/lexer.svg?branch=master)](https://travis-ci.org/tmilos/lexer)
 [![Coverage Status](https://coveralls.io/repos/github/tmilos/lexer/badge.svg?branch=master)](https://coveralls.io/github/tmilos/lexer?branch=master)
 [![License](https://img.shields.io/packagist/l/tmilos/lexer.svg)](https://packagist.org/packages/tmilos/lexer)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/2027f29b-b950-45ca-a185-54a1e3379bf7/small.png)](https://insight.sensiolabs.com/projects/2027f29b-b950-45ca-a185-54a1e3379bf7)
 
 > **Warning**
 > This is not a GENERATOR like classical lex is. It does not produce any php code. It's a simple plain scanner
