@@ -1,5 +1,8 @@
 {
     "name": "tmilos/lexer",
+    "type": "library",
+    "description": "Lexical analyzer with individual token definition with regular expressions",
+    "keywords": ["lexer", "parser"],
     "license": "MIT",
     "authors": [
         {
@@ -12,6 +15,9 @@
             "Tmilos\\Lexer\\": "src/",
             "Tests\\Tmilos\\Lexer\\": "tests/"
         }
+    },
+    "require": {
+        "php": ">=5.5"
     },
     "minimum-stability": "stable",
     "require-dev": {
