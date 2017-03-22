@@ -51,7 +51,7 @@ $config = new LexerArrayConfig([
 
 // static scan method that returns an array of
 $tokens = Lexer::scan($config, '2 + 3');
-array_map(function ($t) { return $this->getName(); }, $tokens); // ['number', 'plus', 'number']
+array_map(function ($t) { return $t->getName(); }, $tokens); // ['number', 'plus', 'number']
 
 // lexer instance
 $lexer = new Lexer($config);
