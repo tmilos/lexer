@@ -17,25 +17,25 @@ use Tmilos\Lexer\Error\UnknownTokenException;
 class Lexer
 {
     /** @var LexerConfig */
-    private $config;
+    protected $config;
 
     /** @var string */
-    private $input;
+    protected $input;
 
     /** @var int */
-    private $position;
+    protected $position;
 
     /** @var int */
-    private $peek;
+    protected $peek;
 
     /** @var Token[] */
-    private $tokens;
+    protected $tokens;
 
     /** @var Token */
-    private $lookahead;
+    protected $lookahead;
 
     /** @var Token */
-    private $token;
+    protected $token;
 
     /**
      * @param LexerConfig $config

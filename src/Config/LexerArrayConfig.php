@@ -14,7 +14,7 @@ namespace Tmilos\Lexer\Config;
 class LexerArrayConfig implements LexerConfig
 {
     /** @var TokenDefn[] */
-    private $definitions = [];
+    protected $definitions = [];
 
     /**
      * @param TokenDefn[] $tokenDefinitions
