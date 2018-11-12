@@ -234,4 +234,14 @@ class Lexer
 
         return $peek;
     }
+
+    /**
+     * Returns all the Tokens
+     *
+     * @return Token[]
+     */
+    public function getTokens()
+    {
+        return $this->tokens;
+    }
 }
