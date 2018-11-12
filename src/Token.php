@@ -75,7 +75,7 @@ class Token
     {
         if ($token instanceof self) {
             return $this->name === $token->getName();
-        } elseif (is_string($token)) {
+        } elseif (is_scalar($token)) {
             return $this->name === $token;
         } else {
             throw new \InvalidArgumentException('Expected string or Token');
