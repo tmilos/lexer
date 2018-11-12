@@ -24,7 +24,7 @@ class LexerArrayConfig implements LexerConfig
         foreach ($tokenDefinitions as $k => $v) {
             if ($v instanceof TokenDefn) {
                 $this->addTokenDefinition($v);
-            } elseif (is_string($k) && is_string($v)) {
+            } elseif (is_string($k) && is_scalar($v)) {
                 $this->addTokenDefinition(new TokenDefn($v, $k));
             }
         }
