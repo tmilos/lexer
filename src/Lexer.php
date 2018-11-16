@@ -118,6 +118,7 @@ class Lexer
         $this->input = $input;
         $this->reset();
         $this->tokens = static::scan($this->config, $input);
+		return $this->tokens;
     }
 
     public function reset()
