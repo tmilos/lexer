@@ -1,5 +1,5 @@
 {
-    "name": "tmilos/lexer",
+    "name": "maximw/lexer",
     "type": "library",
     "description": "Lexical analyzer with individual token definition with regular expressions",
     "keywords": ["lexer", "parser"],
