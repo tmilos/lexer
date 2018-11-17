@@ -118,7 +118,7 @@ class Lexer
         $this->input = $input;
         $this->reset();
         $this->tokens = static::scan($this->config, $input);
-		return $this;
+        return $this;
     }
 	
     public function reset()
@@ -127,19 +127,19 @@ class Lexer
         $this->peek = 0;
         $this->token = null;
         $this->lookahead = null;
-		return $this;
+        return $this;
     }
 
     public function resetPeek()
     {
         $this->peek = 0;
-		return $this;
+        return $this;
     }
 
     public function resetPosition($position = 0)
     {
         $this->position = $position;
-		return $this;
+        return $this;
     }
 
     /**
@@ -184,7 +184,7 @@ class Lexer
         while ($this->lookahead !== null && $this->lookahead->getName() !== $tokenName) {
             $this->moveNext();
         }
-		return $this;
+        return $this;
     }
 
     /**
@@ -195,7 +195,7 @@ class Lexer
         while ($this->lookahead !== null && in_array($this->lookahead->getName(), $tokenNames, true)) {
             $this->moveNext();
         }
-		return $this;
+        return $this;
     }
 
     /**
